@@ -75,24 +75,26 @@ export function Footer() {
               Contact
             </h3>
             <ul className="mt-5 space-y-3 text-sm font-light text-stone-300">
-              <li>+91 98765 43210</li>
-              <li>concierge@ck-infinity.com</li>
+              <li>+91 9537 9977 11, +91 9537 9977 22</li>
+              <li>www.ckinfinitygroup.com</li>
+              <li className="max-w-[220px] leading-relaxed">PROJECT INFO:</li>
               <li className="max-w-[220px] leading-relaxed">
-                Infinity Tower, 12th Road, Bandra West, Mumbai 400050
+                Nr. Hanuman Temple, N.H. 848-B, Daman Road, Kikarla, Dist-
+                Valsad- 396185.
               </li>
             </ul>
             <div className="mt-6 flex gap-4 text-lg">
               <a
                 href="#"
                 className="opacity-80 transition hover:text-gold-light"
-                aria-label="Instagram"
+                aria-label="Facebook"
               >
                 ◎
               </a>
               <a
                 href="#"
                 className="opacity-80 transition hover:text-gold-light"
-                aria-label="LinkedIn"
+                aria-label="Twitter"
               >
                 ◇
               </a>

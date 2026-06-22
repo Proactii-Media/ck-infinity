@@ -56,7 +56,7 @@ export function Hero() {
         playsInline
         poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=85"
       >
-        <source src={HERO_VIDEO} type="video/mp4" />
+        <source src="/heroVideo.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/35 to-cream/95" />
       <div className="absolute inset-0 bg-gradient-to-r from-stone-950/50 via-transparent to-stone-900/25" />

@@ -5,223 +5,304 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
-const team = [
+import {
+  Building2,
+  MapPin,
+  ShieldCheck,
+  Clock3,
+  Users,
+  Sparkles,
+  Target,
+  Eye,
+} from "lucide-react";
+
+const reasons = [
   {
-    name: "Arjun Khanna",
-    role: "Founder & Managing Director",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+    icon: Building2,
+    title: "Quality Construction",
+    text: "We use superior materials and proven construction practices to ensure durability and excellence.",
   },
   {
-    name: "Sofia Fernandes",
-    role: "Chief Design Officer",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+    icon: MapPin,
+    title: "Prime Locations",
+    text: "Strategically selected locations with strong connectivity and future growth potential.",
   },
   {
-    name: "Omar Haddad",
-    role: "Head of Development",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80",
+    icon: Sparkles,
+    title: "Modern Design",
+    text: "Thoughtfully designed homes that maximize space, comfort, and natural living.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Transparency",
+    text: "Clear communication and ethical business practices throughout the buying process.",
+  },
+  {
+    icon: Clock3,
+    title: "Timely Delivery",
+    text: "Strong project management with a commitment to delivering projects on schedule.",
+  },
+  {
+    icon: Users,
+    title: "Customer First",
+    text: "We focus on understanding customer needs and exceeding expectations.",
   },
 ];
 
-const timeline = [
-  { year: "2008", text: "First premium tower delivered in Mumbai suburbs." },
-  {
-    year: "2014",
-    text: "International design collaboration for waterfront residences.",
-  },
-  {
-    year: "2019",
-    text: "CK-Infinity brand unified across India & GCC corridors.",
-  },
-  {
-    year: "2024",
-    text: "Net-zero ready clubhouse pilot across flagship communities.",
-  },
-  {
-    year: "2026",
-    text: "Four landmark launches with smart wellness infrastructure.",
-  },
+const values = [
+  "Integrity & Transparency",
+  "Quality & Excellence",
+  "Customer Satisfaction",
+  "Innovation & Growth",
+  "Trust & Reliability",
+  "Sustainable Development",
 ];
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        title="About CK-Infinity"
-        subtitle="A studio-minded developer building addresses that feel personal, peaceful, and unmistakably premium."
+        title="About CK Infinity Group"
+        subtitle="Building Communities, Enriching Lives"
         image="/ck-hero.jpeg"
       />
 
+      {/* ABOUT */}
       <section className="bg-background py-20 md:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-8 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 md:px-8 lg:grid-cols-2">
           <FadeIn>
             <div className="relative aspect-[5/6] overflow-hidden rounded-[2rem] shadow-2xl">
               <Image
-                src="/ck-hero.jpeg"
-                alt="Corporate interior"
+                src="/ck-lake-side/ck-7.jpeg"
+                alt="CK Infinity Group"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </FadeIn>
+
           <FadeIn delay={0.08}>
             <SectionHeading
-              eyebrow="Introduction"
-              title="Composed for generations"
-              subtitle="CK-Infinity began as a belief that luxury should feel calm—not loud. We partner with master planners, landscape artists, and craftspeople to shape communities where children grow, parents unwind, and legacy quietly accumulates."
+              eyebrow="Who We Are"
+              title="Creating Homes That Inspire Better Living"
             />
-            <p className="mt-6 text-sm font-light leading-relaxed text-stone-600">
-              Our process is iterative and intimate: fewer launches, deeper
-              attention, and long-term stewardship of common spaces. We remain
-              accountable after you move in—because a home is not a transaction;
-              it is a relationship measured in decades.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
 
-      <section className="bg-cream py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-            <FadeIn>
-              <SectionHeading
-                title="Vision"
-                subtitle="To be the most trusted curator of residential serenity in emerging global cities—where design integrity and human warmth coexist."
-              />
-            </FadeIn>
-            <FadeIn delay={0.06}>
-              <SectionHeading
-                title="Mission"
-                subtitle="We deliver meticulously planned homes, immersive amenities, and service ecosystems that honor privacy, safety, and the poetry of daily life."
-              />
-            </FadeIn>
-          </div>
-          <FadeIn delay={0.12} className="mt-16">
-            <div className="glass-panel rounded-[2rem] p-8 md:p-12">
-              <h3 className="font-serif text-3xl font-light text-stone-900">
-                Objectives
-              </h3>
-              <ul className="mt-6 grid gap-4 text-sm font-light leading-relaxed text-stone-600 md:grid-cols-2">
-                <li>
-                  — Elevate environmental performance without compromising
-                  aesthetics.
-                </li>
-                <li>
-                  — Invest in clubhouse programming that families actually use
-                  weekly.
-                </li>
-                <li>
-                  — Maintain transparent timelines and proactive resident
-                  communication.
-                </li>
-                <li>
-                  — Champion local art, materials, and craftsmanship in every
-                  region.
-                </li>
-              </ul>
+            <div className="space-y-5 text-sm leading-relaxed text-stone-600">
+              <p>
+                CK Infinity Group is a progressive real estate development
+                company based in Udwada, dedicated to creating exceptional
+                residential spaces that inspire comfortable and modern living.
+              </p>
+
+              <p>
+                With a passion for quality construction and a commitment to
+                customer satisfaction, we have established ourselves as a
+                trusted name in the real estate sector, delivering homes that
+                blend thoughtful design, functionality, and lasting value.
+              </p>
+
+              <p>
+                We understand that a home is much more than a physical
+                structure—it is a place where families create memories,
+                celebrate milestones, and build their future.
+              </p>
+
+              <p>
+                From elegant row houses and premium bungalows to thoughtfully
+                planned residential communities, every project is designed with
+                meticulous attention to detail and a focus on enhancing the
+                lifestyle of our residents.
+              </p>
+
+              <p>
+                Our approach to real estate development is centered around
+                innovation, transparency, and excellence. We carefully select
+                strategic locations that offer convenience, connectivity, and
+                long-term growth potential.
+              </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
+      {/* MISSION VISION */}
+      <section className="bg-cream py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <FadeIn>
+              <div className="rounded-[2rem] bg-white p-10 shadow-lg">
+                <Target className="h-10 w-10 text-gold" />
+
+                <h3 className="mt-6 font-serif text-3xl font-light text-stone-900">
+                  Our Mission
+                </h3>
+
+                <p className="mt-5 text-sm leading-relaxed text-stone-600">
+                  To develop high-quality residential communities that provide
+                  comfort, security, and lasting value while maintaining the
+                  highest standards of integrity, transparency, and customer
+                  satisfaction.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.08}>
+              <div className="rounded-[2rem] bg-white p-10 shadow-lg">
+                <Eye className="h-10 w-10 text-gold" />
+
+                <h3 className="mt-6 font-serif text-3xl font-light text-stone-900">
+                  Our Vision
+                </h3>
+
+                <p className="mt-5 text-sm leading-relaxed text-stone-600">
+                  To become one of the most trusted and respected real estate
+                  developers in Gujarat by delivering exceptional residential
+                  projects that set new benchmarks in quality, innovation, and
+                  customer experience.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <FadeIn>
             <SectionHeading
-              eyebrow="People"
-              title="Leadership team"
+              eyebrow="Why Choose Us"
+              title="Built On Trust, Quality & Excellence"
               align="center"
               className="mx-auto"
             />
           </FadeIn>
-          <div className="mt-14 grid gap-8 sm:grid-cols-3">
-            {team.map((m, i) => (
-              <FadeIn key={m.name} delay={i * 0.06}>
-                <div className="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-stone-900/5">
-                  <div className="relative aspect-[4/5] overflow-hidden">
-                    <Image
-                      src={m.image}
-                      alt={m.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <p className="font-serif text-xl text-stone-900">
-                      {m.name}
-                    </p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.2em] text-gold-dark">
-                      {m.role}
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {reasons.map((item, i) => {
+              const Icon = item.icon;
+
+              return (
+                <FadeIn key={item.title} delay={i * 0.05}>
+                  <div className="rounded-3xl bg-white p-8 shadow-lg shadow-stone-900/5">
+                    <Icon className="h-8 w-8 text-gold" />
+
+                    <h3 className="mt-5 text-xl font-medium text-stone-900">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                      {item.text}
                     </p>
                   </div>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="bg-stone-900 py-20 text-stone-200 md:py-28">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+      {/* CORE VALUES */}
+      <section className="bg-stone-900 py-20 text-white md:py-28">
+        <div className="mx-auto max-w-6xl px-5 md:px-8 text-center">
           <FadeIn>
             <SectionHeading
-              eyebrow="Milestones"
-              title="Achievements timeline"
+              eyebrow="Our Values"
+              title="The Principles That Guide Us"
               dark
               align="center"
               className="mx-auto"
             />
           </FadeIn>
-          <div className="relative mx-auto mt-16 max-w-3xl">
-            <div className="absolute left-[11px] top-0 hidden h-full w-px bg-gradient-to-b from-gold via-gold/40 to-transparent md:block" />
-            <ul className="space-y-10">
-              {timeline.map((item, i) => (
-                <FadeIn key={item.year} delay={i * 0.05}>
-                  <li className="relative flex flex-col gap-2 md:flex-row md:items-start md:gap-10">
-                    <span className="font-serif text-2xl text-gold-light md:w-24">
-                      {item.year}
-                    </span>
-                    <p className="flex-1 text-sm font-light leading-relaxed text-stone-300">
-                      {item.text}
-                    </p>
-                  </li>
-                </FadeIn>
-              ))}
-            </ul>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {values.map((value) => (
+              <div
+                key={value}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              >
+                {value}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* COMMUNITY */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 md:px-8 lg:grid-cols-2">
+          <FadeIn>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem]">
+              <Image
+                src="/ck-lake-side/ck-4.jpeg"
+                alt="Community Living"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.08}>
+            <SectionHeading
+              eyebrow="Our Commitment"
+              title="More Than Homes, We Build Communities"
+            />
+
+            <p className="mt-6 text-sm leading-relaxed text-stone-600">
+              At CK Infinity Group, we believe successful developments
+              contribute not only to individual homeowners but also to the
+              growth and well-being of the communities they serve.
+            </p>
+
+            <p className="mt-4 text-sm leading-relaxed text-stone-600">
+              Our projects are designed to foster a sense of community through
+              thoughtfully planned infrastructure, open spaces, modern
+              amenities, and secure living environments where families can grow
+              and thrive.
+            </p>
+
+            <p className="mt-4 text-sm leading-relaxed text-stone-600">
+              We are committed to delivering homes that reflect our values of
+              integrity, excellence, and trust while creating sustainable
+              developments that contribute positively to the region's growth.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="bg-gradient-to-b from-cream to-background py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-5 text-center md:px-8">
           <FadeIn>
-            <h2 className="font-serif text-4xl font-light text-stone-900 md:text-5xl">
-              Ready to experience CK-Infinity in person?
+            <span className="text-xs uppercase tracking-[0.3em] text-gold-dark">
+              Building Communities, Enriching Lives
+            </span>
+
+            <h2 className="mt-5 font-serif text-4xl font-light text-stone-900 md:text-5xl">
+              Discover Your Future Home With CK Infinity Group
             </h2>
-            <p className="mt-5 text-base font-light text-stone-600">
-              Schedule a private tour or connect with our acquisition desk for
-              early access inventory.
+
+            <p className="mt-6 text-stone-600">
+              Experience thoughtfully designed residential communities built
+              with quality, trust, and a commitment to better living.
             </p>
+
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <MagneticButton>
                 <Link
-                  href="/inquiry"
-                  className="inline-flex rounded-full bg-stone-900 px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-white"
+                  href="/contact"
+                  className="rounded-full bg-stone-900 px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-white"
                 >
-                  Book consultation
+                  Contact Us
                 </Link>
               </MagneticButton>
+
               <MagneticButton>
                 <Link
                   href="/projects"
-                  className="inline-flex rounded-full border border-stone-300 bg-white px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-stone-900"
+                  className="rounded-full border border-stone-300 bg-white px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-stone-900"
                 >
-                  View projects
+                  View Projects
                 </Link>
               </MagneticButton>
             </div>

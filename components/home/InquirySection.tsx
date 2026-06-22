@@ -9,13 +9,16 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
 const WA =
-  "https://wa.me/919876543210?text=Hello%20CK-Infinity%2C%20I%27d%20like%20to%20schedule%20a%20visit.";
+  "https://wa.me/+919537997711?text=Hello%20CK-Infinity%2C%20I%27d%20like%20to%20schedule%20a%20visit.";
 
 export function InquirySection() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="inquiry" className="relative overflow-hidden bg-background py-24 md:py-32">
+    <section
+      id="inquiry"
+      className="relative overflow-hidden bg-background py-24 md:py-32"
+    >
       <div className="pointer-events-none absolute left-1/2 top-0 h-px w-[min(90%,56rem)] -translate-x-1/2 bg-gradient-to-r from-transparent via-gold/35 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
@@ -37,9 +40,19 @@ export function InquirySection() {
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field label="Name" name="name" placeholder="Your full name" />
-                <Field label="Phone" name="phone" type="tel" placeholder="+91 …" />
+                <Field
+                  label="Phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 …"
+                />
               </div>
-              <Field label="Email" name="email" type="email" placeholder="you@email.com" />
+              <Field
+                label="Email"
+                name="email"
+                type="email"
+                placeholder="you@email.com"
+              />
               <div>
                 <label className="text-[10px] font-medium uppercase tracking-[0.25em] text-stone-500">
                   Interested Project
@@ -97,7 +110,9 @@ export function InquirySection() {
                 Concierge desk
               </h3>
               <p className="mt-4 text-sm font-light leading-relaxed text-stone-600">
-                Visit our experience gallery by appointment. We welcome private walkthroughs, family visits, and NRI consultations across time zones.
+                Visit our experience gallery by appointment. We welcome private
+                walkthroughs, family visits, and NRI consultations across time
+                zones.
               </p>
               <ul className="mt-8 space-y-4 text-sm font-light text-stone-700">
                 <li>
@@ -105,21 +120,22 @@ export function InquirySection() {
                     Phone
                   </span>
                   <br />
-                  +91 98765 43210
+                  +91 9537 9977 11, +91 9537 9977 22
                 </li>
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.25em] text-stone-400">
                     Email
                   </span>
                   <br />
-                  concierge@ck-infinity.com
+                  www.ckinfinitygroup.com
                 </li>
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.25em] text-stone-400">
-                    Office
+                    Prject Info:
                   </span>
                   <br />
-                  Infinity Tower, 12th Road, Bandra West, Mumbai 400050
+                  Nr. Hanuman Temple, N.H. 848-B, Daman Road, Kikarla, Dist-
+                  Valsad- 396185.
                 </li>
               </ul>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">

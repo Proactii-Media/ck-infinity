@@ -63,7 +63,11 @@ export function AboutBrief() {
             <SectionHeading
               eyebrow="Our Philosophy"
               title="About CK-Infinity"
-              subtitle="We compose residential environments where material honesty, generous light, and intuitive service converge. Each address is imagined as a private sanctuary within the city—calm, confident, and enduring."
+              subtitle="
+
+CK Infinity Group is a trusted real estate developer based in Udwada, committed to creating quality residential developments that combine modern living, comfort, and long-term value. With a strong focus on craftsmanship, innovation, and customer satisfaction, we develop thoughtfully planned residential projects including premium apartments, row houses, and bungalows.
+
+Our projects are designed to offer residents a perfect balance of contemporary amenities, functional spaces, and a peaceful lifestyle. Every development reflects our dedication to quality construction, transparent business practices, and timely project delivery. At CK Infinity Group, we believe that a home is more than just a property—it is a foundation for families, aspirations, and future generations."
             />
           </FadeIn>
 

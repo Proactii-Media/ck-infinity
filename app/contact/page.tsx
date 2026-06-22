@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { FaqAccordion } from "@/components/contact/FaqAccordion";
 
 const WA =
-  "https://wa.me/919876543210?text=Hello%20CK-Infinity%20concierge%2C%20I%20have%20a%20question.";
+  "https://wa.me/+919537997711?text=Hello%20CK-Infinity%20concierge%2C%20I%20have%20a%20question.";
 
 export default function ContactPage() {
   return (
@@ -31,15 +31,16 @@ export default function ContactPage() {
                   Phone
                 </p>
                 <p className="mt-2 font-serif text-xl text-stone-900">
-                  +91 98765 43210
+                  +91 9537 9977 11,
+                  <br></br> +91 9537 9977 22
                 </p>
               </div>
               <div className="glass-panel rounded-3xl p-6">
                 <p className="text-[10px] uppercase tracking-[0.25em] text-stone-500">
-                  Email
+                  Website
                 </p>
                 <p className="mt-2 font-serif text-xl text-stone-900">
-                  concierge@ck-infinity.com
+                  www.ckinfinitygroup.com
                 </p>
               </div>
             </div>
@@ -77,25 +78,12 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <FadeIn>
             <h2 className="font-serif text-3xl font-light text-stone-900">
-              Visit our gallery
+              Visit our Project Office
             </h2>
             <p className="mt-3 max-w-2xl text-sm font-light text-stone-600">
-              Infinity Tower, 12th Road, Bandra West, Mumbai 400050 —
-              appointments recommended.
+              Nr. Hanuman Temple, N.H. 848-B, Daman Road, Kikarla, Dist- Valsad-
+              396185 — appointments recommended.
             </p>
-            <div className="mt-8 overflow-hidden rounded-[1.75rem] shadow-xl ring-1 ring-stone-200/80">
-              <iframe
-                title="CK-Infinity office map"
-                src="https://maps.google.com/maps?q=Bandra+West%2C+Mumbai&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="420"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full"
-              />
-            </div>
           </FadeIn>
         </div>
       </section>
