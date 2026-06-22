@@ -102,6 +102,12 @@ export const projects: Project[] = [
         description: "Breathtaking vistas that elevate everyday living.",
       },
       {
+        image: "/ck-lake-side/ck-17.jpeg",
+        title: "Bird View Perspective",
+        description:
+          "A striking front elevation showcasing contemporary architecture, grand proportions, and timeless elegance.",
+      },
+      {
         image: "/ck-lake-side/ck-12.jpeg",
         title: "Luxury Lifestyle",
         description:

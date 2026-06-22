@@ -52,7 +52,7 @@ export const galleryItems: GalleryItem[] = [
     category: "Amenities",
   },
   {
-    src: "/ck-lake-side/ck-10.jpeg",
+    src: "/ck-lake-side/ck-17.jpeg",
     alt: "Elegant bedroom suite",
     category: "Interior",
   },
