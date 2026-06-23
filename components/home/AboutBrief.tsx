@@ -8,10 +8,9 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
 const stats = [
-  { label: "Years Experience", value: 18, suffix: "+" },
-  { label: "Happy Families", value: 2400, suffix: "+" },
-  { label: "Premium Amenities", value: 42, suffix: "+" },
-  { label: "Projects Delivered", value: 28, suffix: "" },
+  { label: "From Daman", value: 7, suffix: "KM" },
+  { label: "From National Highway", value: 3, suffix: "KM" },
+  { label: "Premium Amenities", value: 20, suffix: "+" },
 ];
 
 export function AboutBrief() {

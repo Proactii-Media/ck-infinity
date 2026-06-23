@@ -43,46 +43,40 @@ export const projects: Project[] = [
           "An elegant arrival experience designed with premium finishes and timeless architecture.",
       },
       {
-        image: "/ck-lake-side/ck-2.jpeg",
-        title: "Luxury Living Room",
+        image: "/ck-lake-side/ck-1.jpeg",
+        title: "Lakeside Wellness Promenade",
         description:
-          "Spacious interiors with abundant natural light and panoramic views.",
+          "A serene waterfront jogging track surrounded by lush landscaping, meditation lawns, and breathtaking lake views, creating the perfect environment for an active and balanced lifestyle",
+      },
+      {
+        image: "/ck-lake-side/ck-2.jpeg",
+        title: "4BHK Private Terrace View",
+        description:
+          "Experience spacious 4BHK residences featuring expansive private terraces, contemporary architecture, and seamless indoor-outdoor living designed for modern families.",
       },
       {
         image: "/ck-lake-side/ck-3.jpeg",
-        title: "Master Bedroom",
+        title: "Multi-Sport Activity Arena",
         description:
-          "Private sanctuary crafted for comfort, privacy, and relaxation.",
+          "An expansive recreational hub featuring football, tennis, basketball, and open green spaces, thoughtfully designed to encourage fitness, play, and community engagement.",
       },
       {
         image: "/ck-lake-side/ck-4.jpeg",
-        title: "Designer Kitchen",
+        title: "Contemporary Villa Boulevard",
         description:
-          "Modern kitchen spaces featuring functional layouts and premium materials.",
+          "A beautifully planned streetscape lined with elegant villas, landscaped pathways, and modern facades that reflect sophistication and timeless architectural design.",
       },
       {
         image: "/ck-lake-side/ck-5.jpeg",
-        title: "Infinity Pool Deck",
+        title: "Family Recreation Plaza",
         description:
-          "Resort-inspired leisure spaces overlooking the surrounding landscape.",
+          "A vibrant community space featuring dedicated play areas, landscaped gardens, and leisure zones where families can gather, relax, and create lasting memories.",
       },
       {
-        image: "/ck-lake-side/ck-6.jpeg",
-        title: "Sky Lounge",
-        description:
-          "An exclusive residents' lounge with sophisticated interiors and city views.",
-      },
-      {
-        image: "/ck-lake-side/ck-7.jpeg",
+        image: "/ck-lake-side/ck-15.jpeg",
         title: "Private Balcony",
         description:
           "Open-air spaces designed to maximize views and natural ventilation.",
-      },
-      {
-        image: "/ck-lake-side/ck-8.jpeg",
-        title: "Premium Bathroom",
-        description:
-          "Spa-inspired bathrooms with elegant fittings and contemporary styling.",
       },
       {
         image: "/ck-lake-side/ck-14.jpeg",
@@ -108,22 +102,10 @@ export const projects: Project[] = [
           "A striking front elevation showcasing contemporary architecture, grand proportions, and timeless elegance.",
       },
       {
-        image: "/ck-lake-side/ck-12.jpeg",
-        title: "Luxury Lifestyle",
-        description:
-          "A complete living experience blending comfort, elegance, and exclusivity.",
-      },
-      {
         image: "/ck-lake-side/ck-13.jpeg",
         title: "Jogging Track",
         description:
           "Thoughtfully designed jogging trails encourage an active lifestyle amidst lush landscaped surroundings.",
-      },
-      {
-        image: "/ck-lake-side/ck-15.jpeg",
-        title: "3BHK Balcony ",
-        description:
-          "Spacious private balcony offering fresh air, abundant natural light, and relaxing views for everyday comfort.",
       },
       {
         image: "/ck-lake-side/ck-16.jpeg",

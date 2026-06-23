@@ -37,11 +37,13 @@ export function FaqAccordion() {
               onClick={() => setOpen(isOpen ? null : i)}
               className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
             >
-              <span className="font-serif text-lg font-light text-stone-900">{f.q}</span>
+              <span className="font-serif text-lg font-light text-stone-900">
+                {f.q}
+              </span>
               <span
                 className={cn(
                   "text-gold transition-transform",
-                  isOpen && "rotate-45"
+                  isOpen && "rotate-45",
                 )}
               >
                 +

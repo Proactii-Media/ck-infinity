@@ -82,10 +82,6 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </div>
 
                 <div className="max-w-xl">
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-                    Gallery Feature
-                  </span>
-
                   <h3 className="mt-4 font-serif text-4xl font-light text-stone-900">
                     {item.title}
                   </h3>

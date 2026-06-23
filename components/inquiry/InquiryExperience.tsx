@@ -6,15 +6,6 @@ import { projects } from "@/lib/projects";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
-const budgets = [
-  "₹2–4 Cr",
-  "₹4–8 Cr",
-  "₹8–15 Cr",
-  "₹15 Cr+",
-  "AED 3–6M",
-  "AED 6M+",
-];
-
 export function InquiryExperience() {
   const [success, setSuccess] = useState(false);
 
@@ -31,9 +22,19 @@ export function InquiryExperience() {
           >
             <div className="grid gap-6 sm:grid-cols-2">
               <InputField label="Full name" placeholder="Your name" required />
-              <InputField label="Phone" type="tel" placeholder="+91 …" required />
+              <InputField
+                label="Phone"
+                type="tel"
+                placeholder="+91 …"
+                required
+              />
             </div>
-            <InputField label="Email" type="email" placeholder="you@email.com" required />
+            <InputField
+              label="Email"
+              type="email"
+              placeholder="you@email.com"
+              required
+            />
             <div>
               <label className="text-[10px] font-semibold uppercase tracking-[0.25em] text-stone-500">
                 Preferred project
@@ -49,25 +50,6 @@ export function InquiryExperience() {
                 {projects.map((p) => (
                   <option key={p.slug} value={p.slug}>
                     {p.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="text-[10px] font-semibold uppercase tracking-[0.25em] text-stone-500">
-                Budget range
-              </label>
-              <select
-                required
-                className="mt-2 w-full rounded-2xl border border-stone-200 bg-white/90 px-4 py-3 text-sm outline-none ring-gold/20 focus:ring-2"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select range
-                </option>
-                {budgets.map((b) => (
-                  <option key={b} value={b}>
-                    {b}
                   </option>
                 ))}
               </select>
@@ -143,10 +125,12 @@ export function InquiryExperience() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold/20 text-2xl">
                 ✓
               </div>
-              <h3 className="mt-6 font-serif text-2xl text-stone-900">Thank you</h3>
+              <h3 className="mt-6 font-serif text-2xl text-stone-900">
+                Thank you
+              </h3>
               <p className="mt-3 text-sm font-light leading-relaxed text-stone-600">
-                Your inquiry is received. A CK-Infinity concierge will contact you shortly to confirm your visit
-                and share curated options.
+                Your inquiry is received. A CK-Infinity concierge will contact
+                you shortly to confirm your visit and share curated options.
               </p>
               <button
                 type="button"

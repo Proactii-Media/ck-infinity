@@ -1,44 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const HERO_VIDEO =
-  "https://videos.pexels.com/video-files/3141210/3141210-hd_1920_1080_25fps.mp4";
+const heroImages = ["/main.jpeg", "/ck-lake-side/ck-7.jpeg"];
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const video = videoRef.current;
-    if (!section || !video) return;
-
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        video,
-        { scale: 1 },
-        {
-          scale: 1.14,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        },
-      );
-    }, section);
-
-    return () => ctx.revert();
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -47,30 +25,43 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-[100dvh] items-end overflow-hidden bg-stone-950"
     >
-      <video
-        ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover will-change-transform"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=85"
-      >
-        <source src="/heroVideo.mp4" type="video/mp4" />
-      </video>
+      {/* Background Slider */}{" "}
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <div
+            key={image}
+            className={`absolute inset-0 transition-opacity duration-[1800ms] ease-in-out ${
+              currentSlide === index ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={image}
+              alt={`Luxury Residence ${index + 1}`}
+              fill
+              priority={index === 0}
+              className="object-cover scale-105"
+            />{" "}
+          </div>
+        ))}{" "}
+      </div>
+      {/* Overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/35 to-cream/95" />
       <div className="absolute inset-0 bg-gradient-to-r from-stone-950/50 via-transparent to-stone-900/25" />
-
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-12 px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
         <div className="max-w-4xl">
           <motion.p
             className="text-[11px] font-medium uppercase tracking-[0.45em] text-gold-light"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              delay: 0.2,
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             CK-Infinity Residences
           </motion.p>
+
           <motion.h1
             className="mt-5 font-serif text-5xl font-light leading-[1.05] tracking-tight text-white md:text-7xl lg:text-8xl"
             initial={{ opacity: 0, y: 32 }}
@@ -85,6 +76,7 @@ export function Hero() {
             <br />
             <span className="text-gradient-gold">Luxury Living</span>
           </motion.h1>
+
           <motion.p
             className="mt-6 max-w-xl text-lg font-light leading-relaxed text-stone-200 md:text-xl"
             initial={{ opacity: 0, y: 24 }}
@@ -113,6 +105,7 @@ export function Hero() {
               Explore Projects
             </Link>
           </MagneticButton>
+
           <MagneticButton>
             <Link
               href="/inquiry"
@@ -123,22 +116,41 @@ export function Hero() {
           </MagneticButton>
         </motion.div>
 
-        <motion.div
-          className="flex items-center gap-3 text-[10px] font-light uppercase tracking-[0.4em] text-stone-300"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.8 }}
-        >
-          <span className="h-px w-10 bg-gradient-to-r from-gold to-transparent" />
-          Scroll
-          <motion.span
-            className="flex h-8 w-5 items-start justify-center rounded-full border border-white/25 pt-1"
-            animate={{ y: [0, 4, 0] }}
-            transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
+        <div className="flex items-center justify-between">
+          <motion.div
+            className="flex items-center gap-3 text-[10px] font-light uppercase tracking-[0.4em] text-stone-300"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
           >
-            <span className="h-1.5 w-1 rounded-full bg-gold" />
-          </motion.span>
-        </motion.div>
+            <span className="h-px w-10 bg-gradient-to-r from-gold to-transparent" />
+            Scroll
+            <motion.span
+              className="flex h-8 w-5 items-start justify-center rounded-full border border-white/25 pt-1"
+              animate={{ y: [0, 4, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2.2,
+                ease: "easeInOut",
+              }}
+            >
+              <span className="h-1.5 w-1 rounded-full bg-gold" />
+            </motion.span>
+          </motion.div>
+
+          {/* Slider Indicators */}
+          <div className="flex gap-2">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? "w-10 bg-gold" : "w-2 bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

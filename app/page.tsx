@@ -3,7 +3,6 @@ import { AboutBrief } from "@/components/home/AboutBrief";
 import { ProjectsShowcase } from "@/components/home/ProjectsShowcase";
 import { Amenities } from "@/components/home/Amenities";
 import { WhyChoose } from "@/components/home/WhyChoose";
-import { Testimonials } from "@/components/home/Testimonials";
 import { Gallery } from "@/components/home/Gallery";
 import { InquirySection } from "@/components/home/InquirySection";
 
@@ -15,7 +14,6 @@ export default function HomePage() {
       <ProjectsShowcase />
       <Amenities />
       <WhyChoose />
-      <Testimonials />
       <Gallery />
       <InquirySection />
     </>

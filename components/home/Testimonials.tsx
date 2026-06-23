@@ -48,7 +48,9 @@ export function Testimonials() {
                   type="button"
                   onClick={() => setI(idx)}
                   className={`h-2 rounded-full transition-all ${
-                    idx === i ? "w-8 bg-gold" : "w-2 bg-stone-300 hover:bg-stone-400"
+                    idx === i
+                      ? "w-8 bg-gold"
+                      : "w-2 bg-stone-300 hover:bg-stone-400"
                   }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
@@ -89,7 +91,13 @@ function GlassPanelCarousel({
           className="relative flex flex-col items-center text-center"
         >
           <div className="relative h-20 w-20 overflow-hidden rounded-full ring-2 ring-gold/30 ring-offset-4 ring-offset-background">
-            <Image src={t.image} alt={t.name} fill className="object-cover" sizes="80px" />
+            <Image
+              src={t.image}
+              alt={t.name}
+              fill
+              className="object-cover"
+              sizes="80px"
+            />
           </div>
           <p className="mt-8 font-serif text-2xl font-light leading-relaxed text-stone-800 md:text-3xl">
             {t.quote}
