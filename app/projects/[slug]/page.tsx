@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "@/lib/projects";
 import { PageHero } from "@/components/layout/PageHero";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { Amenities } from "@/components/home/Amenities";
+import { BrochureDownload } from "@/components/contact/BrochureDownload";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -95,28 +97,30 @@ export default async function ProjectDetailPage({ params }: Props) {
               </div>
             ))}
           </FadeIn>
+        </div>
+      </section>
+      <Amenities />
+      <section className="bg-[#0f0f0f] pb-24">
+        <div className="mx-auto max-w-5xl px-5 text-center">
+          <h2 className="font-serif text-4xl font-light text-white md:text-5xl">
+            Experience Luxury Living
+          </h2>
 
-          <FadeIn
-            delay={0.12}
-            className="mt-20 glass-panel rounded-[2rem] p-8 md:p-10"
-          >
-            <h2 className="font-serif text-2xl font-light text-stone-900">
-              Signature Amenities
-            </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg font-light leading-relaxed text-stone-400">
+            Download our project brochure or schedule a private site visit to
+            experience CK Lake Side firsthand.
+          </p>
 
-            <ul className="mt-6 grid gap-3 text-sm font-light text-stone-600 sm:grid-cols-2">
-              {p.amenities.map((amenity) => (
-                <li key={amenity}>— {amenity}</li>
-              ))}
-            </ul>
-
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               href="/inquiry"
-              className="mt-8 inline-flex rounded-full bg-stone-900 px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-stone-800"
+              className="rounded-full bg-yellow-500 px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-yellow-400"
             >
-              Request Brochure
+              Book Site Visit
             </Link>
-          </FadeIn>
+
+            <BrochureDownload />
+          </div>
         </div>
       </section>
     </>

@@ -1,9 +1,8 @@
 import { Hero } from "@/components/home/Hero";
 import { AboutBrief } from "@/components/home/AboutBrief";
 import { ProjectsShowcase } from "@/components/home/ProjectsShowcase";
-import { Amenities } from "@/components/home/Amenities";
+import { HomeAmenities } from "@/components/home/HomeAmenities";
 import { WhyChoose } from "@/components/home/WhyChoose";
-import { Gallery } from "@/components/home/Gallery";
 import { InquirySection } from "@/components/home/InquirySection";
 
 export default function HomePage() {
@@ -12,9 +11,8 @@ export default function HomePage() {
       <Hero />
       <AboutBrief />
       <ProjectsShowcase />
-      <Amenities />
+      <HomeAmenities />
       <WhyChoose />
-      <Gallery />
       <InquirySection />
     </>
   );

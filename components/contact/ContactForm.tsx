@@ -10,7 +10,7 @@ export function ContactForm() {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);0
   const [success, setSuccess] = useState("");
 
   const handleChange = (

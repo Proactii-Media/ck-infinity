@@ -2,22 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
-const heroImages = ["/main.jpeg", "/ck-lake-side/ck-7.jpeg"];
-
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section
@@ -25,28 +15,23 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-[100dvh] items-end overflow-hidden bg-stone-950"
     >
-      {/* Background Slider */}{" "}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        {heroImages.map((image, index) => (
-          <div
-            key={image}
-            className={`absolute inset-0 transition-opacity duration-[1800ms] ease-in-out ${
-              currentSlide === index ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={image}
-              alt={`Luxury Residence ${index + 1}`}
-              fill
-              priority={index === 0}
-              className="object-cover scale-105"
-            />{" "}
-          </div>
-        ))}{" "}
+        <Image
+          src="/ck-lake-side/ck-7.jpeg"
+          alt="CK Infinity Residences"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
       </div>
+
       {/* Overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/35 to-cream/95" />
       <div className="absolute inset-0 bg-gradient-to-r from-stone-950/50 via-transparent to-stone-900/25" />
+
+      {/* Content */}
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-12 px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
         <div className="max-w-4xl">
           <motion.p
@@ -137,19 +122,6 @@ export function Hero() {
               <span className="h-1.5 w-1 rounded-full bg-gold" />
             </motion.span>
           </motion.div>
-
-          {/* Slider Indicators */}
-          <div className="flex gap-2">
-            {heroImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  currentSlide === index ? "w-10 bg-gold" : "w-2 bg-white/40"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>

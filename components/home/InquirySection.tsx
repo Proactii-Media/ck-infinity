@@ -7,6 +7,7 @@ import { projects } from "@/lib/projects";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { BrochureDownload } from "../contact/BrochureDownload";
 
 const WA =
   "https://wa.me/+919537997711?text=Hello%20CK-Infinity%2C%20I%27d%20like%20to%20schedule%20a%20visit.";
@@ -107,13 +108,8 @@ export function InquirySection() {
           <FadeIn delay={0.1}>
             <div className="glass-panel h-full rounded-[2rem] p-8 md:p-10">
               <h3 className="font-serif text-3xl font-light text-stone-900">
-                Concierge desk
+                Get in Touch
               </h3>
-              <p className="mt-4 text-sm font-light leading-relaxed text-stone-600">
-                Visit our experience gallery by appointment. We welcome private
-                walkthroughs, family visits, and NRI consultations across time
-                zones.
-              </p>
               <ul className="mt-8 space-y-4 text-sm font-light text-stone-700">
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.25em] text-stone-400">
@@ -153,6 +149,9 @@ export function InquirySection() {
                 >
                   Visit Office
                 </Link>
+              </div>
+              <div className="mt-8">
+                <BrochureDownload />
               </div>
             </div>
           </FadeIn>

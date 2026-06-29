@@ -33,7 +33,6 @@ function AmenityGrid({
             }}
             className="group relative h-[280px] overflow-hidden rounded-[28px]"
           >
-            {/* Image */}
             <Image
               src={item.image}
               alt={item.title}
@@ -41,12 +40,9 @@ function AmenityGrid({
               className="object-cover transition duration-700 group-hover:scale-110"
             />
 
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40" />
-
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-            {/* Content */}
             <div className="absolute bottom-0 left-0 z-10 w-full p-6">
               <h4 className="font-serif text-2xl font-light tracking-wide text-white md:text-3xl">
                 {item.title}
@@ -61,12 +57,22 @@ function AmenityGrid({
   );
 }
 
-export function Amenities() {
+interface AmenitiesProps {
+  home?: boolean;
+}
+
+export function Amenities({ home = false }: AmenitiesProps) {
+  const outdoorItems = home ? outdoorAmenities.slice(0, 4) : outdoorAmenities;
+
+  const clubHouseItems = home
+    ? clubHouseAmenities.slice(0, 4)
+    : clubHouseAmenities;
+
   return (
     <section className="bg-[#0f0f0f] py-24">
       <div className="mx-auto max-w-7xl px-5">
         <div className="mb-20 text-center">
-          <p className="mb-4 tracking-[0.3em] text-yellow-500 uppercase">
+          <p className="mb-4 uppercase tracking-[0.3em] text-yellow-500">
             Luxury Lifestyle
           </p>
 
@@ -76,12 +82,9 @@ export function Amenities() {
         </div>
 
         <div className="space-y-24">
-          <AmenityGrid title="Outdoor Amenities" items={outdoorAmenities} />
+          <AmenityGrid title="Outdoor Amenities" items={outdoorItems} />
 
-          <AmenityGrid
-            title="Club House Amenities"
-            items={clubHouseAmenities}
-          />
+          <AmenityGrid title="Club House Amenities" items={clubHouseItems} />
         </div>
       </div>
     </section>

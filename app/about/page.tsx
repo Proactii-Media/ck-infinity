@@ -1,10 +1,11 @@
+import type { Metadata } from "next";
+import { AboutSection } from "@/components/about/AboutSection";
 import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/layout/PageHero";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-
+import { MasterPlanSection } from "@/components/about/AboutMasterPlan";
 import {
   Building2,
   MapPin,
@@ -58,72 +59,18 @@ const values = [
   "Sustainable Development",
 ];
 
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Discover CK Infinity Group — trusted real estate developers in Udwada crafting premium residential communities.",
+};
+
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        title="About CK Infinity Group"
-        subtitle="Building Communities, Enriching Lives"
-        image="/ck-hero.jpeg"
-      />
+      <AboutSection />
 
-      {/* ABOUT */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-14 px-5 md:px-8 lg:grid-cols-2">
-          <FadeIn>
-            <div className="relative aspect-[5/6] overflow-hidden rounded-[2rem] shadow-2xl">
-              <Image
-                src="/ck-lake-side/ck-7.jpeg"
-                alt="CK Infinity Group"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.08}>
-            <SectionHeading
-              eyebrow="Who We Are"
-              title="Creating Homes That Inspire Better Living"
-            />
-
-            <div className="space-y-5 text-sm leading-relaxed text-stone-600">
-              <p>
-                CK Infinity Group is a progressive real estate development
-                company based in Udwada, dedicated to creating exceptional
-                residential spaces that inspire comfortable and modern living.
-              </p>
-
-              <p>
-                With a passion for quality construction and a commitment to
-                customer satisfaction, we have established ourselves as a
-                trusted name in the real estate sector, delivering homes that
-                blend thoughtful design, functionality, and lasting value.
-              </p>
-
-              <p>
-                We understand that a home is much more than a physical
-                structure—it is a place where families create memories,
-                celebrate milestones, and build their future.
-              </p>
-
-              <p>
-                From elegant row houses and premium bungalows to thoughtfully
-                planned residential communities, every project is designed with
-                meticulous attention to detail and a focus on enhancing the
-                lifestyle of our residents.
-              </p>
-
-              <p>
-                Our approach to real estate development is centered around
-                innovation, transparency, and excellence. We carefully select
-                strategic locations that offer convenience, connectivity, and
-                long-term growth potential.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <MasterPlanSection />
 
       {/* MISSION VISION */}
       <section className="bg-cream py-20 md:py-28">

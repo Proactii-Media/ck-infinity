@@ -2,6 +2,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { FaqAccordion } from "@/components/contact/FaqAccordion";
+import { BrochureDownload } from "@/components/contact/BrochureDownload";
 
 const WA =
   "https://wa.me/+919537997711?text=Hello%20CK-Infinity%20concierge%2C%20I%20have%20a%20question.";
@@ -70,6 +71,9 @@ export default function ContactPage() {
                 LinkedIn
               </a>
             </div>
+            <div className="mt-8">
+              <BrochureDownload />
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -80,9 +84,11 @@ export default function ContactPage() {
             <h2 className="font-serif text-3xl font-light text-stone-900">
               Visit our Project Office
             </h2>
+
             <p className="mt-3 max-w-2xl text-sm font-light text-stone-600">
-              Nr. Hanuman Temple, N.H. 848-B, Daman Road, Kikarla, Dist- Valsad-
-              396185 — appointments recommended.
+              Nr. Hanuman Temple, N.H. 848-B, Daman Road, Kikarla, Dist. Valsad
+              - 396185. Appointments are recommended for a personalized
+              walkthrough.
             </p>
           </FadeIn>
         </div>
