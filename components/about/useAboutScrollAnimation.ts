@@ -28,7 +28,7 @@ type BreakpointConfig = {
 function buildHeroTimeline(
   tl: gsap.core.Timeline,
   refs: AboutAnimationRefs,
-  config: BreakpointConfig
+  config: BreakpointConfig,
 ) {
   const { typographyRef, textRef, heroRef, morphRef, morphInnerRef } = refs;
 
@@ -51,37 +51,18 @@ function buildHeroTimeline(
       ease: "power2.inOut",
       duration: escapeStart,
     },
-    0
+    0,
   );
 
   tl.fromTo(
     text,
-    {
-      backgroundSize: "cover",
-      color: "var(--foreground)",
-      WebkitTextFillColor: "var(--foreground)",
-    },
+    { backgroundSize: "cover" },
     {
       backgroundSize: config.bgZoomEnd,
       ease: "power2.inOut",
       duration: escapeStart,
     },
-    0
-  );
-
-  tl.fromTo(
-    text.querySelector("span"),
-    {
-      color: "transparent",
-      WebkitTextFillColor: "transparent",
-    },
-    {
-      color: "transparent",
-      WebkitTextFillColor: "transparent",
-      ease: "none",
-      duration: 0,
-    },
-    0
+    0,
   );
 
   tl.fromTo(
@@ -92,7 +73,7 @@ function buildHeroTimeline(
       ease: "power2.inOut",
       duration: escapeStart,
     },
-    0
+    0,
   );
 
   tl.fromTo(
@@ -107,7 +88,7 @@ function buildHeroTimeline(
       ease: "power3.inOut",
       duration: 1 - escapeStart + 0.08,
     },
-    escapeStart - 0.04
+    escapeStart - 0.04,
   );
 
   tl.to(
@@ -117,28 +98,33 @@ function buildHeroTimeline(
       ease: "power3.inOut",
       duration: 0.2,
     },
-    escapeStart + 0.12
+    escapeStart + 0.12,
   );
 
   tl.to(
     morphInner,
     { scale: 1, ease: "power3.inOut", duration: 0.25 },
-    escapeStart + 0.35
+    escapeStart + 0.35,
   );
 }
 
 function setInitialState(refs: AboutAnimationRefs) {
   const { textRef, morphRef, morphInnerRef, heroRef, typographyRef } = refs;
+  const text = textRef.current;
 
-  gsap.set(textRef.current, {
+  if (
+    !text ||
+    !morphRef.current ||
+    !morphInnerRef.current ||
+    !heroRef.current ||
+    !typographyRef.current
+  ) {
+    return;
+  }
+
+  gsap.set(text, {
     backgroundSize: "cover",
     backgroundPosition: "center center",
-    color: "transparent",
-    WebkitTextFillColor: "transparent",
-  });
-
-  gsap.set(textRef.current?.querySelector("span.heroTextMask"), {
-    opacity: 1,
   });
 
   gsap.set(morphRef.current, {
@@ -204,7 +190,7 @@ function createPinnedTimeline(
   section: HTMLElement,
   pin: HTMLElement,
   refs: AboutAnimationRefs,
-  config: BreakpointConfig
+  config: BreakpointConfig,
 ) {
   const tl = gsap.timeline({
     scrollTrigger: {
