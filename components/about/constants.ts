@@ -1,13 +1,13 @@
 /** Same image used in typography and morphs into the about hero image */
-export const MORPH_IMAGE = "/ck-lake-side/ck-7.jpeg";
+export const MORPH_IMAGE = "/ck-lake-side/ck-8.jpeg";
 
 export const ABOUT_IMAGES = {
   smallTop: {
-    src: "/ck-lake-side/ck-2.jpeg",
+    src: "/ck-lake-side/ck-14.jpeg",
     alt: "Warm minimalist living interior",
   },
   smallBottom: {
-    src: "/ck-lake-side/ck-17.jpeg",
+    src: "/ck-lake-side/ck-7.jpeg",
     alt: "Elegant bedroom suite",
   },
 } as const;
